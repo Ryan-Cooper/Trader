@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Trader</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>
 			var isRunning = 0;
 			var wood = 0;
@@ -9,15 +10,12 @@
 			var stoneAdd = 1;
 			var food = 10;
 			var foodAdd = 10;
-			var popLoss = 1;
+			var population = 1;
 			var foodLossOn = 0;
 		</script>
 		<script src="js/main.js"></script>
 		<script src="js/collect.js"></script>
 		<script src="js/food.js"></script>
-		<script>
-			setTimeout(start(), 10);
-		</script>
 	</head>
 	<body>
 		</br>
@@ -25,7 +23,7 @@
 		</br>
 		<center>
 		<p>
-			Trade with other castles to keep up relations.
+			Trade with other nations to keep up relations.
 		</br>
 			You are a still developing nation.  You have a small army to defend from attacks.
 		</br>
@@ -35,17 +33,29 @@
 		</br></br></br></br>
 		</p>
 		</center>
+		<div id="wood">
 		<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
 		</br>
 		<p id="woodText">Wood: 0</p>
 		</br>
 		</br>
-		<button type="button" onClick=collectStone()>Collect Stone(+1 Stone)</button>
+		</div>
+		<div id="stone">
+		<button type="button" onClick=collectStone()>Collect Stone(-5 Wood, +1 Stone)</button>
 		</br>
 		<p id="stoneText">Stone: 0</p>
 		</br>
 		</br>
-		<button type="button" onClick=collectFood()>Collect Food(+10 Food)</button>
+		</div>
+		<div id="food">
+		<button type="button" onClick=collectFood()>Collect Food(-10 Wood, +10 Food)</button>
 		<p id="foodText">Food: 10</p>
+		</br>
+		</br>
+		</div>
+		<div id="population">
+		<button type="button" onClick=makePop()>Make Population(-5 food, +1 Population)</button>
+		</br>
+		<p id="popText">Population: 1</p>
 	</body>
 </html>

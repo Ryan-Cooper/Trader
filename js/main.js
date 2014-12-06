@@ -5,6 +5,6 @@ function start(){
 	stoneAdd = 1;
 	food = 10;
 	foodAdd = 10;
-	popLoss = 1;
+	population = 1;
 	isRunning = 1;
 }
