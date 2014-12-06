@@ -14,6 +14,7 @@ function collectStone(){
 function collectFood(){
 	if(wood >= 10){
 		food = food + foodAdd;
+		wood = wood - 10;
 	}
 	update();
 }
