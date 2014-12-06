@@ -1,6 +1,23 @@
 <html>
 	<head>
-		<title>LD31 Temp Name</title>
+		<title>Trader</title>
+		<script>
+			var isRunning = 0;
+			var wood = 0;
+			var stone = 0;
+			var woodAdd = 1;
+			var stoneAdd = 1;
+			var food = 10;
+			var foodAdd = 10;
+			var popLoss = 1;
+			var foodLossOn = 0;
+		</script>
+		<script src="js/main.js"></script>
+		<script src="js/collect.js"></script>
+		<script src="js/food.js"></script>
+		<script>
+			setTimeout(start(), 10);
+		</script>
 	</head>
 	<body>
 		</br>
@@ -15,6 +32,20 @@
 			Trading builds an economy.  The bigger your economy the bigger your army can be.
 		</br>
 			What happens next is up to you.
+		</br></br></br></br>
+		</p>
 		</center>
+		<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
+		</br>
+		<p id="woodText">Wood: 0</p>
+		</br>
+		</br>
+		<button type="button" onClick=collectStone()>Collect Stone(+1 Stone)</button>
+		</br>
+		<p id="stoneText">Stone: 0</p>
+		</br>
+		</br>
+		<button type="button" onClick=collectFood()>Collect Food(+10 Food)</button>
+		<p id="foodText">Food: 10</p>
 	</body>
 </html>
