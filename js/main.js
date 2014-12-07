@@ -17,6 +17,11 @@ function start(){
 	aiPopOne = 10;
 	aiOneRel = 100;
 }
+function continue(){
+	$("#gameWin").hide();
+	$("#gamescreen").show();
+	isRunning = 1;
+}
 
 var foodLossInterval = 0;
 
@@ -24,6 +29,7 @@ function update(){
 	if(isRunning = 1){
 		$("#gameover").hide();
 		checkLoss();
+		checkWin();
 		$("#popText").text("Population: " + population);
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
