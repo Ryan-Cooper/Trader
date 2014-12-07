@@ -3,6 +3,7 @@
 		<title>Trader</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>
+			var devMode = 0;
 			var isRunning = 0;
 			var wood = 0;
 			var stone = 0;
@@ -12,9 +13,15 @@
 			var foodAdd = 10;
 			var population = 1;
 			var foodLossOn = 0;
+			var aiWoodOne = 100;
+			var aiStoneOne = 50;
+			var aiFoodOne = 200;
+			var aiPopOne = 10;
+			var aiOneRel = 100;
 		</script>
 		<script src="js/main.js"></script>
 		<script src="js/collect.js"></script>
+		<script src="js/ai.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script>
 			start();
@@ -46,26 +53,45 @@
 			</br>
 		</div>
 		<div id="stone">
-			<button type="button" onClick=collectStone()>Collect Stone(-5 Wood, +1 Stone)</button>
+			<button type="button" onClick=collectStone()>Collect Stone(-5 Wood)</button>
 			</br>
 			<p id="stoneText">Stone: 0</p>
 			</br>
 			</br>
 		</div>
 		<div id="food">
-			<button type="button" onClick=collectFood()>Collect Food(-5 Stone, +10 Food)</button>
+			<button type="button" onClick=collectFood()>Collect Food(-5 Stone)</button>
 			</br>
 			<p id="foodText">Food: 10</p>
 			</br>
 			</br>
 		</div>
 		<div id="population">
-			<button type="button" onClick=makePop()>Make Population(-5 food, -5 stone, -5 wood, +1 Population)</button>
+			<button type="button" onClick=makePop()>Make Population(-5 food, -5 stone, -5 wood)</button>
 			</br>
 			<p id="popText">Population: 1</p>
 		</div>
 		</div>
 		<div class="ai1">
+			<button type="button" onClick=giveWoodOne()>Give Wood(-10 Wood)</button>
+			<button type="button" onClick=requestWoodOne()>Request Wood(+5 Wood)</button>
+			</br>
+			<p id="aiWoodOneText">Wood: 100</p>
+			</br>
+			</br>
+			<button type="button" onClick=giveStoneOne()>Give Stone(-10 Stone)</button>
+			<button type="button" onClick=requestStoneOne()>Request Stone(+5 Stone)</button>
+			</br>
+			<p id="aiStoneOneText">Stone: 50</p>
+			</br>
+			</br>
+			<button type="button" onClick=giveFoodOne()>Give Food(-10 Food)</button>
+			<button type="button" onClick=requestFoodOne()>Request Food(+5 Food)</button>
+			</br>
+			<p id="aiFoodOneText">Food: 200</p>
+			</br>
+			<p id="aiPopOneText">Population: 10</p>
+			<p id="aiOneRelText">100% Relationship</p>
 		</div>
 	</body>
 </html>
