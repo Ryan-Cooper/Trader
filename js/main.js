@@ -33,8 +33,7 @@ function update(){
 	if(isRunning = 1){
 		$("#gameover").hide();
 		$("#gameWin").hide();
-		checkLoss();
-		checkWin();
+
 		$("#popText").text("Population: " + population);
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
@@ -62,6 +61,8 @@ function update(){
 		$("#aiPopOneText").hide();
 		}
 		$("#aiOneRelText").text(aiOneRel + "% Relationship");
+		checkLoss();
+		checkWin();
 	}
 }
 function foodLoss(){
