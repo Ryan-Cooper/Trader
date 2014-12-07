@@ -27,6 +27,8 @@
 		<script>
 			start();
 			setInterval(function(){update();}, 100);
+			setInterval(function(){aiBrainOne();, 100};
+			setInterval(function(){foodLoss();}, 100);
 		</script>
 	</head>
 	<body>
@@ -75,20 +77,20 @@
 		</div>
 		</div>
 		<div class="ai1">
-			<button type="button" onClick=giveWoodOne()>Give Wood(-10 Wood)</button>
-			<button type="button" onClick=requestWoodOne()>Request Wood(+5 Wood)</button>
+			<button type="button" onClick=giveWood(1)>Give Wood(-10 Wood)</button>
+			<button type="button" onClick=requestWood(1)>Request Wood(+5 Wood)</button>
 			</br>
 			<p id="aiWoodOneText">Wood: 100</p>
 			</br>
 			</br>
-			<button type="button" onClick=giveStoneOne()>Give Stone(-10 Stone)</button>
-			<button type="button" onClick=requestStoneOne()>Request Stone(+5 Stone)</button>
+			<button type="button" onClick=giveStone(1)>Give Stone(-10 Stone)</button>
+			<button type="button" onClick=requestStone(1)>Request Stone(+5 Stone)</button>
 			</br>
 			<p id="aiStoneOneText">Stone: 50</p>
 			</br>
 			</br>
-			<button type="button" onClick=giveFoodOne()>Give Food(-10 Food)</button>
-			<button type="button" onClick=requestFoodOne()>Request Food(+5 Food)</button>
+			<button type="button" onClick=giveFood(1)>Give Food(-10 Food)</button>
+			<button type="button" onClick=requestFood(1)>Request Food(+5 Food)</button>
 			</br>
 			<p id="aiFoodOneText">Food: 200</p>
 			</br>

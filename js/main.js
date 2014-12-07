@@ -28,7 +28,6 @@ function update(){
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
 		$("#woodText").text("Wood: " + wood);
-		foodLossInterval++;
 		if(foodLossInterval == 50){
 			foodLossInterval = 0;
 			if(population > food){
@@ -42,7 +41,6 @@ function update(){
 				aiFoodOne = aiFoodOne - aiPopOne;
 			}
 		}
-		aiBrainOne();
 		$("#aiWoodOneText").text("Wood: " + aiWoodOne);
 		$("#aiStoneOneText").text("Stone: " + aiStoneOne);
 		$("#aiFoodOneText").text("Food: " + aiFoodOne);
@@ -54,4 +52,7 @@ function update(){
 		}
 		$("#aiOneRelText").text(aiOneRel + "% Relationship");
 	}
+}
+function foodLoss(){
+	foodLossInterval++;
 }
