@@ -12,17 +12,23 @@ function collectStone(){
 }
 
 function collectFood(){
-	if(wood >= 10){
+	if(stone >= 5){
 		food = food + foodAdd;
-		wood = wood - 10;
+		stone = stone - 5;
 	}
 	update();
 }
 
 function makePop(){
 	if(food >= 5){
-		population = population + 1;
-		food = food - 5
+		if(wood >= 5){
+			if(stone >= 5){
+				population = population + 1;
+				stone = stone - 5;
+				wood = wood -5;
+				food = food - 5;
+			}
+		}
 	}
 	update();
 }

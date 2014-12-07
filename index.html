@@ -17,6 +17,7 @@
 		<script src="js/collect.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script>
+			start();
 			setInterval(function(){update();}, 100);
 		</script>
 	</head>
@@ -52,14 +53,14 @@
 			</br>
 		</div>
 		<div id="food">
-			<button type="button" onClick=collectFood()>Collect Food(-10 Wood, +10 Food)</button>
+			<button type="button" onClick=collectFood()>Collect Food(-5 Stone, +10 Food)</button>
 			</br>
 			<p id="foodText">Food: 10</p>
 			</br>
 			</br>
 		</div>
 		<div id="population">
-			<button type="button" onClick=makePop()>Make Population(-5 food, +1 Population)</button>
+			<button type="button" onClick=makePop()>Make Population(-5 food, -5 stone, -5 wood, +1 Population)</button>
 			</br>
 			<p id="popText">Population: 1</p>
 		</div>
