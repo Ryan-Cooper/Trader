@@ -32,21 +32,3 @@ function makePop(){
 	}
 	update();
 }
-
-var foodLossInterval = 0;
-
-function update(){
-	$("#popText").text("Population: " + population);
-	$("#foodText").text("Food: " + food);
-	$("#stoneText").text("Stone: " + stone);
-	$("#woodText").text("Wood: " + wood);
-	foodLossInterval++;
-	if(foodLossInterval == 50){
-		foodLossInterval = 0;
-		if(population > food){
-			population = population - 1;
-		} else{
-			food = food - population;
-		}
-	}
-}
