@@ -53,7 +53,9 @@ function giveWood(ai){
 		if(wood >= 10){
 			wood = wood - 10;
 			aiWoodOne = aiWoodOne + 10;
-			aiOneRel = aiOneRel + 1;
+			if(aiOneRel < 100){
+				aiOneRel = aiOneRel + 1;
+			}
 		}
 	}
 }
@@ -70,7 +72,12 @@ function giveStone(ai){
 		if(stone >= 10){
 			stone = stone - 10;
 			aiStoneOne = aiStoneOne + 10;
-			aiOneRel = aiOneRel + 5;
+			if(aiOneRel < 100){
+				aiOneRel = aiOneRel + 5;
+				if(aiOneRel > 100){
+					aiOneRel = 100;
+				}
+			}
 		}
 	}
 }
@@ -87,7 +94,12 @@ function giveFood(ai){
 		if(food >= 10){
 			food = food - 10;
 			aiFoodOne = aiFoodOne + 10;
-			aiOneRel = aiOneRel + 10;
+			if(aiOneRel < 100){
+				aiOneRel = aiOneRel + 10;
+				if(aiOneRel > 100){
+					aiOneRel = 100;
+				}
+			}
 		}
 	}
 }
