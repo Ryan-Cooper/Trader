@@ -1,5 +1,4 @@
 function start(){
-	$("#gamescreen").show();
 	$("#gameover").hide();
 	$("#gameWin").hide();
 	hasWon = 0;
@@ -18,6 +17,7 @@ function start(){
 	aiFoodOne = 200;
 	aiPopOne = 10;
 	aiOneRel = 100;
+	$("#gamescreen").show();
 }
 
 function continueGame(){
