@@ -15,7 +15,10 @@
 		</script>
 		<script src="js/main.js"></script>
 		<script src="js/collect.js"></script>
-		<script src="js/food.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script>
+			setInterval(function(){update();}, 100);
+		</script>
 	</head>
 	<body>
 		</br>
@@ -33,29 +36,35 @@
 		</br></br></br></br>
 		</p>
 		</center>
+		<div class="player">
 		<div id="wood">
-		<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
-		</br>
-		<p id="woodText">Wood: 0</p>
-		</br>
-		</br>
+			<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
+			</br>
+			<p id="woodText">Wood: 0</p>
+			</br>
+			</br>
 		</div>
 		<div id="stone">
-		<button type="button" onClick=collectStone()>Collect Stone(-5 Wood, +1 Stone)</button>
-		</br>
-		<p id="stoneText">Stone: 0</p>
-		</br>
-		</br>
+			<button type="button" onClick=collectStone()>Collect Stone(-5 Wood, +1 Stone)</button>
+			</br>
+			<p id="stoneText">Stone: 0</p>
+			</br>
+			</br>
 		</div>
 		<div id="food">
-		<button type="button" onClick=collectFood()>Collect Food(-10 Wood, +10 Food)</button>
-		<p id="foodText">Food: 10</p>
-		</br>
-		</br>
+			<button type="button" onClick=collectFood()>Collect Food(-10 Wood, +10 Food)</button>
+			</br>
+			<p id="foodText">Food: 10</p>
+			</br>
+			</br>
 		</div>
 		<div id="population">
-		<button type="button" onClick=makePop()>Make Population(-5 food, +1 Population)</button>
-		</br>
-		<p id="popText">Population: 1</p>
+			<button type="button" onClick=makePop()>Make Population(-5 food, +1 Population)</button>
+			</br>
+			<p id="popText">Population: 1</p>
+		</div>
+		</div>
+		<div class="ai1">
+		</div>
 	</body>
 </html>
