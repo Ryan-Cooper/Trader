@@ -61,7 +61,7 @@ function giveWood(ai){
 }
 function requestWood(ai){
 	if(ai == 1){
-		if(doNottGiftOne == 0){
+		if(doNotGiftOne == 0){
 			wood = wood + 5;
 			aiWoodOne = aiWoodOne - 5;
 		}

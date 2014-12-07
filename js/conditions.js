@@ -15,6 +15,7 @@ function checkWin(){
 						$("#gamescreen").hide();
 						$("#gameWin").show();
 						isRunning = 0;
+						hasWon = 1;
 					}
 				}
 			}
@@ -23,6 +24,7 @@ function checkWin(){
 			$("#gamescreen").hide();
 			$("#gameWin").show();
 			isRunning = 0;
+			hasWon = 1;
 		}
 	}
 }
