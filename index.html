@@ -22,6 +22,7 @@
 		<script src="js/main.js"></script>
 		<script src="js/collect.js"></script>
 		<script src="js/ai.js"></script>
+		<script src="js/conditions.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script>
 			start();
@@ -44,6 +45,7 @@
 		</br></br></br></br>
 		</p>
 		</center>
+		<div id="gamescreen">
 		<div class="player">
 		<div id="wood">
 			<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
@@ -92,6 +94,13 @@
 			</br>
 			<p id="aiPopOneText">Population: 10</p>
 			<p id="aiOneRelText">100% Relationship</p>
+		</div>
+		</div>
+		<div id="gameover">
+			<center>
+			<h1>Game Over</h>
+			<button type="button" onClick=start()>Restart</button>
+			</center>
 		</div>
 	</body>
 </html>
