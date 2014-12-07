@@ -3,6 +3,7 @@
 		<title>Trader</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>
+			var hasWon = 0;
 			var devMode = 0;
 			var isRunning = 0;
 			var wood = 0;
@@ -106,10 +107,12 @@
 			</center>
 		</div>
 		<div id="gameWin">
+			<center>
 			<h1>You've Won!</h>
 			</br>
 			<button type="button" onClick=start()>Restart</button>
-			<button type="button" onClick=continue()>Continue</button>
+			<button type="button" onClick=continueGame()>Continue</button>
+			</center>
 		</div>
 	</body>
 </html>

@@ -1,6 +1,8 @@
 function start(){
 	$("#gamescreen").show();
 	$("#gameover").hide();
+	$("#gameWin").hide();
+	hasWon = 0;
 	devMode = 0;
 	isRunning = 1;
 	wood = 0;
@@ -17,10 +19,12 @@ function start(){
 	aiPopOne = 10;
 	aiOneRel = 100;
 }
-function continue(){
+
+function continueGame(){
 	$("#gameWin").hide();
 	$("#gamescreen").show();
 	isRunning = 1;
+	hasWon = 1;
 }
 
 var foodLossInterval = 0;
@@ -28,6 +32,7 @@ var foodLossInterval = 0;
 function update(){
 	if(isRunning = 1){
 		$("#gameover").hide();
+		$("#gameWin").hide();
 		checkLoss();
 		checkWin();
 		$("#popText").text("Population: " + population);

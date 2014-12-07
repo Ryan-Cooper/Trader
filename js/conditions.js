@@ -7,20 +7,22 @@ function checkLoss(){
 }
 
 function checkWin(){
-	if(population == 100){
-		if(wood == 10000){
-			if(stone == 5000){
-				if(food == 15000){
-					$("#gamescreen").hide();
-					$("#gameWin").show();
-					isRunning = 0;
+	if(hasWon == 0){
+		if(population >= 100){
+			if(wood >= 10000){
+				if(stone >= 5000){
+					if(food >= 15000){
+						$("#gamescreen").hide();
+						$("#gameWin").show();
+						isRunning = 0;
+					}
 				}
 			}
 		}
-	}
-	if(aiPopOne == 0){
-		$("#gamescreen").hide();
-		$("#gameWin").show();
-		isRunning = 0;
+		if(aiPopOne == 0){
+			$("#gamescreen").hide();
+			$("#gameWin").show();
+			isRunning = 0;
+		}
 	}
 }
