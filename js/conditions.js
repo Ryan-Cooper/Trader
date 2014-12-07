@@ -20,11 +20,12 @@ function checkWin(){
 				}
 			}
 		}
-		if(aiPopOne == 0){
-			$("#gamescreen").hide();
-			$("#gameWin").show();
-			isRunning = 0;
-			hasWon = 1;
+	}
+	if(aiPopOne == 0){
+		$("#gamescreen").hide();
+		$("#gameWin").show();
+		isRunning = 0;
+		hasWon = 1;
 		}
 	}
 }
