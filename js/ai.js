@@ -14,7 +14,9 @@ function aiBrainOne(){
 	if(aiStoneOne >= 50){
 		if(aiWoodOne >= 50){
 			if(aiFoodOne >= 50){
-				aiMakePopOne();
+				if(aiFoodOne / 4 >= aiPopOne){
+					aiMakePopOne();
+				}
 			};
 		};
 		aiCollectFoodFor();
