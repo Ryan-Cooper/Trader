@@ -1,32 +1,35 @@
 var aiOneRelDropInterval = 0;
 var doNotGiftOne = 0;
 function aiBrainOne(){
-	aiOneRelDropInterval++;
-	if(aiOneRel <= 60){
-		doNotGiftOne = 1;
-	}
-	aiCollectWoodFor();
-	if(aiWoodOne >= 50){
-		aiCollectStoneOne();
-	} else{
-		aiCollectWoodFor();
-	}
-	if(aiStoneOne >= 50){
-		if(aiWoodOne >= 50){
-			if(aiFoodOne >= 50){
-				if(aiFoodOne / 4 >= aiPopOne){
-					aiMakePopOne();
-				}
-			};
-		};
-		aiCollectFoodFor();
-	} else{
-		aiCollectWoodFor();
-	}
-	if(aiOneRelDropInterval == 300){
-		if(aiOneRel > 0){
-			aiOneRel = aiOneRel - 5;
+	if(isRunning = 1){
+		aiOneRelDropInterval++;
+		if(aiOneRel <= 60){
+			doNotGiftOne = 1;
+		} else {
+			doNotGiftOne = 0;
 		}
+		aiCollectWoodFor();
+		if(aiWoodOne >= 50){
+			aiCollectStoneOne();
+		} else{
+			aiCollectWoodFor();
+		}
+		if(aiStoneOne >= 50){
+			if(aiWoodOne >= 50){
+				if(aiFoodOne >= 50){
+					if(aiFoodOne / 4 >= aiPopOne){
+						aiMakePopOne();
+					}
+				};
+			};
+			aiCollectFoodFor();
+		} else{
+			aiCollectWoodFor();
+		}
+		if(aiOneRelDropInterval == 300){
+			if(aiOneRel > 0){
+				aiOneRel = aiOneRel - 5;
+			}
 		aiOneRelDropInterval = 0;
 	}
 }
@@ -110,4 +113,5 @@ function requestFood(ai){
 			food = food + 5;
 		}
 	}
+}
 }

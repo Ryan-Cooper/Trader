@@ -17,6 +17,8 @@ function start(){
 	aiFoodOne = 200;
 	aiPopOne = 10;
 	aiOneRel = 100;
+	$("#gameover").hide();
+	$("#gameWin").hide();
 	$("#gamescreen").show();
 }
 
@@ -31,6 +33,8 @@ var foodLossInterval = 0;
 
 function update(){
 	if(isRunning = 1){
+		checkWin();
+		checkLoss();
 		$("#gameover").hide();
 		$("#gameWin").hide();
 		checkLoss();
