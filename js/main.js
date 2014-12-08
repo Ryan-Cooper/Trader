@@ -16,6 +16,7 @@ function start(){
 	aiPopOne = 10;
 	aiOneRel = 100;
 	hideScreens();
+	showGame();
 }
 
 function continueGame(){
@@ -66,4 +67,7 @@ function foodLoss(){
 function hideScreens(){
 	$("#gameover").hide();
 	$("#gameWin").hide();
+}
+function showGame(){
+	$("#gamescreen").show();
 }
