@@ -26,6 +26,5 @@ function checkWin(){
 		$("#gameWin").show();
 		isRunning = 0;
 		hasWon = 1;
-		}
 	}
 }

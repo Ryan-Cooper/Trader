@@ -25,12 +25,6 @@
 		<script src="js/ai.js"></script>
 		<script src="js/conditions.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script>
-			start();
-			setInterval(function(){update();}, 100);
-			setInterval(function(){aiBrainOne();}, 100);
-			setInterval(function(){foodLoss();}, 100);
-		</script>
 	</head>
 	<body>
 		</br>
@@ -114,5 +108,14 @@
 			<button type="button" onClick=continueGame()>Continue</button>
 			</center>
 		</div>
+		<script>
+			start();
+			setInterval(function(){if(isRunning == 1){update();}}, 100);
+			setInterval(function(){aiBrainOne();}, 100);
+			setInterval(function(){foodLoss();}, 100);
+			setInterval(function(){checkWin();}, 10);
+			setInterval(function(){checkLoss();}, 10);
+		</script>
+
 	</body>
 </html>
