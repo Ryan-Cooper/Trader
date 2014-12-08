@@ -10,6 +10,7 @@ Todo
 + Visual Rework
 + Make aiBrain work with multiple ai
 + Add more ai
++ Save game feature
 
 
 Possibilities
