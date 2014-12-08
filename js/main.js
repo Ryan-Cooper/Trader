@@ -37,7 +37,8 @@ function update(){
 		checkLoss();
 		$("#gameover").hide();
 		$("#gameWin").hide();
-
+		checkLoss();
+		checkWin();
 		$("#popText").text("Population: " + population);
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
