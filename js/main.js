@@ -1,6 +1,4 @@
 function start(){
-	$("#gameover").hide();
-	$("#gameWin").hide();
 	hasWon = 0;
 	devMode = 0;
 	isRunning = 1;
@@ -17,9 +15,7 @@ function start(){
 	aiFoodOne = 200;
 	aiPopOne = 10;
 	aiOneRel = 100;
-	$("#gameover").hide();
-	$("#gameWin").hide();
-	$("#gamescreen").show();
+	hideScreens();
 }
 
 function continueGame(){
@@ -35,10 +31,6 @@ function update(){
 	if(isRunning = 1){
 		checkWin();
 		checkLoss();
-		$("#gameover").hide();
-		$("#gameWin").hide();
-		checkLoss();
-		checkWin();
 		$("#popText").text("Population: " + population);
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
@@ -70,4 +62,8 @@ function update(){
 }
 function foodLoss(){
 	foodLossInterval++;
+}
+function hideScreens(){
+	$("#gameover").hide();
+	$("#gameWin").hide();
 }

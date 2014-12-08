@@ -1,5 +1,6 @@
 var aiOneRelDropInterval = 0;
 var doNotGiftOne = 0;
+var aiPopModOne = aiPopOne / 2;
 function aiBrainOne(){
 	if(isRunning = 1){
 		aiOneRelDropInterval++;
@@ -33,16 +34,17 @@ function aiBrainOne(){
 		aiOneRelDropInterval = 0;
 	}
 }
+}
 
 function aiCollectWoodFor(){
-	aiWoodOne = aiWoodOne + 5;
+	aiWoodOne = aiWoodOne + (5 * aiPopModOne);
 }
 function aiCollectFoodFor(){
-	aiFoodOne = aiFoodOne + 5;
+	aiFoodOne = aiFoodOne + (5 * aiPopModOne);
 	aiStoneOne = aiStoneOne - 10;
 }
 function aiCollectStoneOne(){
-	aiStoneOne = aiStoneOne + 1;
+	aiStoneOne = aiStoneOne + (1 * aiPopModOne);
 	aiWoodOne = aiWoodOne - 5;
 }
 function aiMakePopOne(){
@@ -65,8 +67,10 @@ function giveWood(ai){
 function requestWood(ai){
 	if(ai == 1){
 		if(doNotGiftOne == 0){
-			wood = wood + 5;
-			aiWoodOne = aiWoodOne - 5;
+			if(aiWoodOne > 100){
+				wood = wood + 5;
+				aiWoodOne = aiWoodOne - 5;
+			}
 		}
 	}
 }
@@ -87,8 +91,10 @@ function giveStone(ai){
 function requestStone(ai){
 	if(ai == 1){
 		if(doNotGiftOne == 0){
-			stone = stone + 5;
-			aiStoneOne = aiStoneOne - 5;
+			if(aiStoneOne > 100){
+				stone = stone + 5;
+				aiStoneOne = aiStoneOne - 5;
+			}
 		}
 	}
 }
@@ -109,9 +115,10 @@ function giveFood(ai){
 function requestFood(ai){
 	if(ai == 1){
 		if(doNotGiftOne == 0){
-			aiFoodOne = aiFoodOne - 5;
-			food = food + 5;
+			if(aiFoodOne / 4 > aiPopOne){
+				aiFoodOne = aiFoodOne - 5;
+				food = food + 5;
+			}
 		}
 	}
-}
 }
