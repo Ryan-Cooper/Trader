@@ -1,14 +1,30 @@
 body {
-	background-color: #FFEFDF;
+	background-color: #BFAF80;
+}
+.leftMargin {
+	background-color: #380138;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 15%;
+	height: 100%;
+}
+.rightMargin {
+	background-color: #380138;
+	position: fixed;
+	top: 0%;
+	left: 85%;
+	width: 15%;
+	height: 100%;
 }
 
 .player {
 	position: fixed;
 	top: 30%;
-	left: 10%;
+	left: 20%;
 }
 .ai1 {
 	position: fixed;
 	top: 30%;
-	left: 35%;
+	left: 45%;
 }
