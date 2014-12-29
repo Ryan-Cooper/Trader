@@ -27,6 +27,10 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body>
+		<div class="leftMargin">
+		</div>
+		<div class="rightMargin">
+		</div>
 		</br>
 		</br>
 		</br>
@@ -45,47 +49,44 @@
 		<div id="gamescreen">
 		<div class="player">
 		<div id="wood">
-			<button type="button" onClick=collectWood()>Collect Wood(+1 Wood)</button>
+			<a class="btn" onclick=collectWood()>Collect Wood(+1 Wood)</a>
 			</br>
 			<p id="woodText">Wood: 0</p>
 			</br>
-			</br>
 		</div>
 		<div id="stone">
-			<button type="button" onClick=collectStone()>Collect Stone(-5 Wood)</button>
+			<a class="btn" onclick=collectStone()>Collect Stone(-5 Wood)</a>
 			</br>
 			<p id="stoneText">Stone: 0</p>
 			</br>
-			</br>
 		</div>
 		<div id="food">
-			<button type="button" onClick=collectFood()>Collect Food(-5 Stone)</button>
+			<a class="btn" onclick=collectFood()>Collect Food(-5 Stone)</a>
 			</br>
 			<p id="foodText">Food: 10</p>
 			</br>
-			</br>
 		</div>
 		<div id="population">
-			<button type="button" onClick=makePop()>Make Population(-5 food, -5 stone, -5 wood)</button>
+			<a class="btn" onclick=makePop()>Make Population(-5 food, -5 stone, -5 wood)</a>
 			</br>
 			<p id="popText">Population: 1</p>
 		</div>
 		</div>
 		<div class="ai1">
-			<button type="button" onClick=giveWood(1)>Give Wood(-10 Wood)</button>
-			<button type="button" onClick=requestWood(1)>Request Wood(+5 Wood)</button>
+			<a class="btn" onclick=giveWood(1)>Give Wood(-10 Wood)</a>
+			<a class="btn" onclick=requestWood(1)>Request Wood(+5 Wood)</a>
 			</br>
 			<p id="aiWoodOneText">Wood: 100</p>
 			</br>
 			</br>
-			<button type="button" onClick=giveStone(1)>Give Stone(-10 Stone)</button>
-			<button type="button" onClick=requestStone(1)>Request Stone(+5 Stone)</button>
+			<a class="btn" onclick=giveStone(1)>Give Stone(-10 Stone)</a>
+			<a class="btn" onclick=requestStone(1)>Request Stone(+5 Stone)</a>
 			</br>
 			<p id="aiStoneOneText">Stone: 50</p>
 			</br>
 			</br>
-			<button type="button" onClick=giveFood(1)>Give Food(-10 Food)</button>
-			<button type="button" onClick=requestFood(1)>Request Food(+5 Food)</button>
+			<a class="btn" onclick=giveFood(1)>Give Food(-10 Food)</a>
+			<a class="btn" onclick=requestFood(1)>Request Food(+5 Food)</a>
 			</br>
 			<p id="aiFoodOneText">Food: 200</p>
 			</br>
@@ -97,15 +98,15 @@
 			<center>
 			<h1>Game Over</h>
 			</br>
-			<button type="button" onClick=start()>Restart</button>
+			<a class="btn" onclick=start()>Restart</a>
 			</center>
 		</div>
 		<div id="gameWin">
 			<center>
 			<h1>You've Won!</h>
 			</br>
-			<button type="button" onClick=start()>Restart</button>
-			<button type="button" onClick=continueGame()>Continue</button>
+			<a class="btn" onclick=start()>Restart</a>
+			<a class="btn" onclick=continueGame()>Continue</a>
 			</center>
 		</div>
 		<script>

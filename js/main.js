@@ -36,6 +36,7 @@ function update(){
 		$("#foodText").text("Food: " + food);
 		$("#stoneText").text("Stone: " + stone);
 		$("#woodText").text("Wood: " + wood);
+		popModifier = population / 2;
 		if(foodLossInterval == 50){
 			foodLossInterval = 0;
 			if(population > food){

@@ -91,7 +91,7 @@ function giveStone(ai){
 function requestStone(ai){
 	if(ai == 1){
 		if(doNotGiftOne == 0){
-			if(aiStoneOne > 100){
+			if(aiStoneOne > 40){
 				stone = stone + 5;
 				aiStoneOne = aiStoneOne - 5;
 			}
