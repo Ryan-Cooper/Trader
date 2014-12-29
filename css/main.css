@@ -1,5 +1,5 @@
 body {
-	background-color: #BFAF80;
+	background-color: #F2EEB3;
 }
 .leftMargin {
 	background-color: #380138;
@@ -17,7 +17,29 @@ body {
 	width: 15%;
 	height: 100%;
 }
-
+a.btn {
+	display: inline-block;
+	text-align: center;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+a.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+a.btn:active {
+	background-color: #CCC;
+	border-color: rgba(0,0,0,0.9);
+}
 .player {
 	position: fixed;
 	top: 30%;
